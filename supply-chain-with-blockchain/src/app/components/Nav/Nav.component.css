@@ -1,0 +1,7 @@
+b{
+    transition: all 0.3s;
+}
+
+b:hover{
+    color: #ffe700;
+}

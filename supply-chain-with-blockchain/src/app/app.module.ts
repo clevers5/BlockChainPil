@@ -4,9 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// Components
+import { NavComponent } from './components/Nav/Nav.component';
+import { LoginComponent } from './components/login/login.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    NavComponent, LoginComponent
   ],
   imports: [
     BrowserModule,
