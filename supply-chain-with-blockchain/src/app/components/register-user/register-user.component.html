@@ -1,0 +1,55 @@
+<div class="label-container">
+  <form  class="label-form" [formGroup]="registerForm">
+    <h3 class="container text-center">REGISTRAR USUARIO</h3>
+    <div class="form-row">
+      <div class="form-group col-md-7">
+        <label for="name" class="field">Nombre</label>
+        <input type="text" class="form-control" formControlName="name"/>
+        <label color="danger" *ngIf="isInvalid('name')">
+          <h6 *ngIf="hasErrorControl('name', 'required')">El campo Nombre es requerido</h6>
+          <h6 *ngIf="hasErrorControl('name', 'minlength')">Ingrese 3 caracteres como mínimo</h6>
+          <h6 *ngIf="hasErrorControl('name', 'maxlength')">Ingrese 50 caracteres como máximo</h6>
+          <h6 *ngIf="hasErrorControl('name', 'pattern')">Ingrese sólo letras</h6>
+        </label>
+      </div>
+      <div class="form-group col-md-7">
+        <label for="lastname" class="field">Apellidos</label>
+        <input type="text" class="form-control" formControlName="lastname"/>
+        <label color="danger" *ngIf="isInvalid('lastname')">
+          <h6 *ngIf="hasErrorControl('lastname', 'required')">El campo Apellidos es requerido</h6>
+          <h6 *ngIf="hasErrorControl('lastname', 'minlength')">Ingrese 3 caracteres como mínimo</h6>
+          <h6 *ngIf="hasErrorControl('lastname', 'maxlength')">Ingrese 50 caracteres como máximo</h6>
+          <h6 *ngIf="hasErrorControl('lastname', 'pattern')">Ingrese sólo letras</h6>
+        </label>
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-7">
+            <label for="email" class="field">Correo electrónico</label>
+            <input type="email" class="form-control" formControlName="email"/>
+            <label color="danger" *ngIf="isInvalid('email')">
+              <h6 *ngIf="hasErrorControl('email', 'required')">El campo Correo electrónico es requerido</h6>
+              <h6 *ngIf="hasErrorControl('email', 'email')">Ingrese un e-mail válido</h6>
+            </label>
+        </div>
+      <div class="form-group col-md-7">
+          <label class="field">Contraseña</label>
+          <input type="password" class="form-control" formControlName="password"/>
+          <label color="danger" *ngIf="isInvalid('password')">
+            <h6 *ngIf="hasErrorControl('password', 'required')">El campo Contraseña es requerido</h6>
+            <h6 *ngIf="hasErrorControl('password', 'pattern')">Ingrese una contraseña válida</h6>
+          </label>
+      </div>
+  </div>
+    
+    
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <button expand="block" color="secondary" (click)="cancel()">CANCELAR</button>
+        </div>
+        <div class="form-group col-md-6">
+          <button expand="block" color="primary" type="submit" (click)="save()" [disabled]="!registerForm.valid">REGISTRAR</button>
+      </div>
+    </div>
+  </form>
+</div>
