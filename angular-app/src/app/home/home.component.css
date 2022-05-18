@@ -15,7 +15,7 @@ body {
     background-color: red;
 }
 .imgPrincipal img {
-    width: 450px;
+    width: 300px;
 }
 
 @media all and (max-width:768px){

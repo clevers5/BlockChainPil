@@ -11,6 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+
 .container-fluid {
     display: grid;
     margin-left: 72px;
@@ -141,4 +143,9 @@
     height: auto;
     max-height: 200px;
     overflow-x: hidden;
+}
+
+img .imglogo{
+    width: 400px;
+    height: auto;
 }
