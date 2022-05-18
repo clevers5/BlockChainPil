@@ -14,3 +14,17 @@
 body {
     background-color: red;
 }
+.imgPrincipal img {
+    width: 450px;
+}
+
+@media all and (max-width:768px){
+
+
+
+    .imgPrincipal img {
+        width: 350px;
+        margin-bottom: 50px;
+    }
+ 
+    }

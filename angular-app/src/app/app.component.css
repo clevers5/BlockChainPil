@@ -19,7 +19,7 @@
 
 .navbar {
     border-radius: 0px;
-    background: #F3F3F3;
+    background: #343E51;
     border: none;
 }
 
@@ -54,7 +54,7 @@
 
 .navbar-nav > a {
     font-size: 14px;
-    color: #343C41;
+    color: #f8f8f8;
     letter-spacing: 0.2px;
 }
 
@@ -78,8 +78,8 @@
 }
 
 .navbar-nav .active > a {
-    background-color: #fff;
-    color: #6C4CC4 !important;
+    background-color: #343E51;
+    color: #ffffff !important;
 }
 
 .dropdown-menu {

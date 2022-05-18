@@ -150,7 +150,7 @@ input[name=search-box-product]:focus {
     background-color: #844AE4;
     border-color: #844AE4;
     border-radius: 4px;
-    width: 76px;
+    width: 90px;
     height: 40px;
 }
 .btn-success:focus{

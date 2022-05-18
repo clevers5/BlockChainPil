@@ -16,8 +16,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="addParticipantModalLabel">Create participant</h4>
-            <p class="modal-intro">Enter the required values below.</p>
+          <h4 class="modal-title" id="addParticipantModalLabel">Crear participantes</h4>
+            <p class="modal-intro">Ingrese los valores requeridos a continuacion.</p>
         </div>
         <form [formGroup]="myForm">
           <div class="modal-body">
@@ -27,7 +27,7 @@
   
               
                 <div class="form-group text-left">
-                  <label for="email">email</label>
+                  <label for="email">Correo Electronico</label>
                   
                     <input formControlName="email" type="text" class="form-control">
                   
@@ -37,7 +37,7 @@
   
               
                 <div class="form-group text-left">
-                  <label for="firstName">firstName</label>
+                  <label for="firstName">Nombre</label>
                   
                     <input formControlName="firstName" type="text" class="form-control">
                   
@@ -47,7 +47,7 @@
   
               
                 <div class="form-group text-left">
-                  <label for="lastName">lastName</label>
+                  <label for="lastName">Apellidos</label>
                   
                     <input formControlName="lastName" type="text" class="form-control">
                   
@@ -57,7 +57,7 @@
   
               
                 <div class="form-group text-left">
-                  <label for="type">type</label>
+                  <label for="type">Tipo</label>
                   
                     <input formControlName="type" type="text" class="form-control">
                   
@@ -67,8 +67,8 @@
   
           </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button (click)="addParticipant(myForm);" type="submit" class="btn btn-success" value="Refresh Page" onClick="setTimeout(window.location.reload.bind(window.location), 2000);" data-dismiss="modal">Confirm</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button (click)="addParticipant(myForm);" type="submit" class="btn btn-success" value="Refresh Page" onClick="setTimeout(window.location.reload.bind(window.location), 2000);" data-dismiss="modal">Confirmar</button>
   
           </div>
         </form>
@@ -84,7 +84,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="updateParticipantModalLabel">Update Participant</h4>
+          <h4 class="modal-title" id="updateParticipantModalLabel">Actualizar participantes</h4>
         </div>
         <form [formGroup]="myForm">
           <div class="modal-body">
@@ -92,7 +92,7 @@
   
             
               <div class="form-group text-left">
-                <label for="email">email</label>
+                <label for="email">Correo Electronico</label>
   
                 
                   <input [ngModel]="email" formControlName="email" class="form-control" disabled="disabled">  
@@ -101,7 +101,7 @@
               </div>
             
               <div class="form-group text-left">
-                <label for="firstName">firstName</label>
+                <label for="firstName">Nombre</label>
   
                 
                   <input [ngModel]="firstName"formControlName="firstName" type="text" class="form-control">
@@ -110,7 +110,7 @@
               </div>
             
               <div class="form-group text-left">
-                <label for="lastName">lastName</label>
+                <label for="lastName">Apellidos</label>
   
                 
                   <input [ngModel]="lastName"formControlName="lastName" type="text" class="form-control">
@@ -119,7 +119,7 @@
               </div>
             
               <div class="form-group text-left">
-                <label for="type">type</label>
+                <label for="type">Tipo</label>
   
                 
                   <input [ngModel]="type"formControlName="type" type="text" class="form-control">
@@ -131,8 +131,8 @@
   
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button (click)="updateParticipant(myForm)" type="submit" class="btn btn-success" value="Refresh Page" onClick="setTimeout(window.location.reload.bind(window.location), 2000);" data-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button (click)="updateParticipant(myForm)" type="submit" class="btn btn-success" value="Refresh Page" onClick="setTimeout(window.location.reload.bind(window.location), 2000);" data-dismiss="modal">Enviar</button>
           </div>
         </form>
       </div>
@@ -146,15 +146,15 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="deleteParticipantModalLabel">Delete Participant</h4>
+          <h4 class="modal-title" id="deleteParticipantModalLabel">Borrar participantes</h4>
         </div>
         <form [formGroup]="myForm" (ngSubmit)="deleteParticipant()">
           <div class="modal-body">
-            Are you sure you want to delete this participant?
+            ¿Está seguro de que desea eliminar a este participante?
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-            <button (click)="deleteParticipant()" type="submit" class="btn btn-danger" value="Refresh Page" onClick="setTimeout(window.location.reload.bind(window.location), 2000);" data-dismiss="modal">Yes</button>
+            <button (click)="deleteParticipant()" type="submit" class="btn btn-danger" value="Refresh Page" onClick="setTimeout(window.location.reload.bind(window.location), 2000);" data-dismiss="modal">Si</button>
           </div>
         </form>
       </div>
@@ -178,7 +178,7 @@
     
     <div class="row">
       <div class="col-md-9">
-          <h1 class="participant-title" id='participantName'>Retailer</h1>
+          <h1 class="participant-title" id='participantName'>Comerciante</h1>
       </div>
       <div class="col-md-3">
         <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addParticipantModal">
@@ -187,7 +187,7 @@
                   <path fill-rule="evenodd" d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z"/>
                 </svg>
             </span>
-          Create Participant
+          Crear participante
         </button>
       </div>
     </div>
@@ -198,15 +198,15 @@
           <thead class="thead">
             <tr class="thead-cols">
               
-                  <th class="info">email</th>
+                  <th class="info">Correo Electronico</th>
               
-                  <th class="info">firstName</th>
+                  <th class="info">Nombre</th>
               
-                  <th class="info">lastName</th>
+                  <th class="info">Apellidos</th>
               
-                  <th class="info">type</th>
+                  <th class="info">tipo</th>
               
-                <th class="info-actions">Actions</th>
+                <th class="info-actions">Acciones</th>
             </tr>
           </thead>
           <tbody>

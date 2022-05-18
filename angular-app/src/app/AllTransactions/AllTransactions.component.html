@@ -15,19 +15,19 @@
   </div>
 
   <div *ngIf="performedTransactions.length == 0 && systemTransactions.length == 0" class="row">
-      <h4>No transactions</h4>
+      <h4>No Hay Transacciones</h4>
     </div>
 
   <div *ngIf="performedTransactions.length > 0" class="row" >
-    <h4>Performed Transactions</h4>
+    <h4>Transacciones Realizadas</h4>
     <table class="table table-striped">
       <thead>
         <tr>
           <th>
-            Transaction Type
+            Tipo de transaccion
           </th>
           <th>
-            Transaction ID
+            ID Transaccion
           </th>
         </tr>
       </thead>
@@ -53,16 +53,16 @@
   </div>
 
   <div *ngIf="systemTransactions.length > 0" class="row">
-    <h4>System Transactions</h4>
+    <h4>Transacciones del sistema</h4>
 
     <table class="table table-striped">
       <thead>
         <tr>
           <th>
-            Transaction Type
+            Tipo de transaccion
           </th>
           <th>
-            Transaction ID
+            ID Transaccion
           </th>
         </tr>
       </thead>

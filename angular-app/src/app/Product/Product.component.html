@@ -13,7 +13,7 @@
 -->
 
 <div class="search">
-  <h4 class="heading" style ="font-family: 'Source Sans Pro Light', sans-serif; ">Search here to display a particular product: <input type="text" name="search-box-product" placeholder="Search" id="txtempsearch" [(ngModel)] = "AssetFind" /></h4>
+  <h4 class="heading" style ="font-family: 'Source Sans Pro Light', sans-serif; ">Busque aquí para mostrar un producto en particular: <input type="text" name="search-box-product" placeholder="Search" id="txtempsearch" [(ngModel)] = "AssetFind" /></h4>
     
 </div>
 
@@ -22,8 +22,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addAssetModalLabel">Create asset</h4>
-          <p class="modal-intro">Enter the required values below.</p>
+        <h4 class="modal-title" id="addAssetModalLabel">Crear activo</h4>
+          <p class="modal-intro">Ingrese los valores requeridos a continuación.</p>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
@@ -33,7 +33,7 @@
 
             
               <div class="form-group text-left">
-                <label for="productId">productId</label>
+                <label for="productId">Id del producto</label>
                 
                   <input formControlName="productId" type="text" class="form-control">
                 
@@ -43,7 +43,7 @@
 
             
               <div class="form-group text-left">
-                <label for="producttype">producttype</label>
+                <label for="producttype">Tipo de producto</label>
                 
                   <input formControlName="producttype" type="text" class="form-control">
                 
@@ -52,7 +52,7 @@
           
 
             
-              <label for="size">size</label>
+              <label for="size">Tamaño</label>
               <div class="checkbox">
                 
                   <label>
@@ -65,7 +65,7 @@
                       type="radio"
                       
                     />
-                    SMALL
+                    Pequeño
                   </label>
                 
                   <label>
@@ -78,7 +78,7 @@
                       type="radio"
                       
                     />
-                    MEDIUM
+                    Mediano
                   </label>
                 
                   <label>
@@ -91,7 +91,7 @@
                       type="radio"
                       
                     />
-                    LARGE
+                    Grande
                   </label>
                 
               </div>
@@ -99,7 +99,7 @@
           
 
             
-              <label for="description">description</label>
+              <label for="description">Descripcion</label>
               <div class="checkbox">
                 
                   <label>
@@ -112,7 +112,7 @@
                       type="radio"
                       
                     />
-                    Shoes
+                    Zapatos
                   </label>
                 
                   <label>
@@ -125,7 +125,7 @@
                       type="radio"
                       
                     />
-                    Socks
+                    Medias
                   </label>
                 
                   <label>
@@ -138,7 +138,7 @@
                       type="radio"
                       
                     />
-                    Belts
+                    Cinturones
                   </label>
                 
                   <label>
@@ -151,7 +151,7 @@
                       type="radio"
                       
                     />
-                    SportsShoes
+                    Zapatos deportivos
                   </label>
                 
                   <label>
@@ -164,7 +164,7 @@
                       type="radio"
                       
                     />
-                    Flipflops
+                    Chancletas
                   </label>
                 
               </div>
@@ -173,7 +173,7 @@
 
             
               <div class="form-group text-left">
-                <label for="owner">owner</label>
+                <label for="owner">Propietarios</label>
                 
                     <textarea formControlName="owner" class="form-control" rows="3"></textarea>
                 
@@ -183,7 +183,7 @@
 
             
               <div class="form-group text-left">
-                <label for="issuer">issuer</label>
+                <label for="issuer">Editor</label>
                 
                     <textarea formControlName="issuer" class="form-control" rows="3"></textarea>
                 
@@ -193,8 +193,8 @@
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" value="Refresh Page" onClick="setTimeout(window.location.reload.bind(window.location), 2000);" data-dismiss="modal">Confirm</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" value="Refresh Page" onClick="setTimeout(window.location.reload.bind(window.location), 2000);" data-dismiss="modal">Confirmar</button>
 
         </div>
       </form>

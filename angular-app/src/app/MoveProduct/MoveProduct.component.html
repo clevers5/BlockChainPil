@@ -16,8 +16,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addTransactionModalLabel">Create Transaction</h4>
-          <p class="modal-intro">Enter the required values below.</p>
+        <h4 class="modal-title" id="addTransactionModalLabel">Crear Transaccion</h4>
+          <p class="modal-intro">Ingrese los valores requeridos a continuación.</p>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
@@ -27,7 +27,7 @@
 
             
               <div class="form-group text-left">
-                <label for="product">product</label>
+                <label for="product">Producto</label>
                 
                     <textarea formControlName="product" class="form-control" rows="3"></textarea>
                 
@@ -37,7 +37,7 @@
 
             
               <div class="form-group text-left">
-                <label for="issuer">issuer</label>
+                <label for="issuer">Editor</label>
                 
                     <textarea formControlName="issuer" class="form-control" rows="3"></textarea>
                 
@@ -47,7 +47,7 @@
 
             
               <div class="form-group text-left">
-                <label for="newOwner">newOwner</label>
+                <label for="newOwner">Nuevo Dueño</label>
                 
                     <textarea formControlName="newOwner" class="form-control" rows="3"></textarea>
                 
@@ -77,8 +77,8 @@
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirmar</button>
 
         </div>
       </form>
@@ -94,7 +94,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="updateTransactionModalLabel">Update Transaction</h4>
+        <h4 class="modal-title" id="updateTransactionModalLabel">Actualizar Transaccion</h4>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
@@ -102,7 +102,7 @@
 
           
             <div class="form-group text-left">
-              <label for="product">product</label>
+              <label for="product">Producto</label>
 
               
                 
@@ -113,7 +113,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="issuer">issuer</label>
+              <label for="issuer">Editor</label>
 
               
                 
@@ -124,7 +124,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="newOwner">newOwner</label>
+              <label for="newOwner">Nuevo Dueño</label>
 
               
                 
@@ -135,7 +135,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="transactionId">transactionId</label>
+              <label for="transactionId">ID de transacción</label>
 
               
                 <input [ngModel]="transactionId"formControlName="transactionId" type="text" class="form-control">
@@ -144,7 +144,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="timestamp">timestamp</label>
+              <label for="timestamp">Tiempo</label>
 
               
                 <input [ngModel]="timestamp"formControlName="timestamp" type="text" class="form-control">
@@ -156,8 +156,8 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button (click)="updateTransaction(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button (click)="updateTransaction(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Enviar</button>
         </div>
       </form>
     </div>
@@ -171,15 +171,15 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="deleteTransactionModalLabel">Delete Transaction</h4>
+        <h4 class="modal-title" id="deleteTransactionModalLabel">Borrar Transaccion</h4>
       </div>
       <form [formGroup]="myForm" (ngSubmit)="deleteTransaction()">
         <div class="modal-body">
-          Are you sure you want to delete this Transaction?
+          ¿Está seguro de que desea eliminar esta transacción?
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-          <button (click)="deleteTransaction()" type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
+          <button (click)="deleteTransaction()" type="submit" class="btn btn-danger" data-dismiss="modal">Si</button>
         </div>
       </form>
     </div>
@@ -203,8 +203,8 @@
   
   <div class="row">
     <div class="col-md-12">
-        <h1 class="transaction-title" id='transactionName'>MoveProduct</h1>
-        <p class="invoke_cancel" id='invoke_cancel'>Invoke</p>
+        <h1 class="transaction-title" id='transactionName'>Mover Producto</h1>
+        <p class="invoke_cancel" id='invoke_cancel'>Invocar</p>
     </div>
   </div>
   <br>
@@ -212,33 +212,33 @@
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-12">
-          When invoked, this transaction will have the following attributes:
+          Cuando se invoque, esta transacción tendrá los siguientes atributos:
           <br>
           <ul>
             
 
               
-                <li><span class="attribute"><b>product</b></span></li>
+                <li><span class="attribute"><b>Producto</b></span></li>
               
             
 
               
-                <li><span class="attribute"><b>issuer</b></span></li>
+                <li><span class="attribute"><b>Editor</b></span></li>
               
             
 
               
-                <li><span class="attribute"><b>newOwner</b></span></li>
+                <li><span class="attribute"><b>Nuevo dueño</b></span></li>
               
             
 
               
-                <li><span class="attribute"><b>transactionId</b></span></li>
+                <li><span class="attribute"><b>ID de transacción</b></span></li>
               
             
 
               
-                <li><span class="attribute"><b>timestamp</b></span></li>
+                <li><span class="attribute"><b>Tiempo</b></span></li>
               
             
           </ul>
@@ -246,7 +246,7 @@
       </div>
       <!-- <button type="button" class="btn btn-primary invokeTransactionBtn" data-toggle="modal">Invoke</button> -->
       <button (click)="resetForm();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">
-      Invoke</button>  
+      Invocar</button>  
     </div>
   </div>
 </div>
