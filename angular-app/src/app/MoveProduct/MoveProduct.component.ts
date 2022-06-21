@@ -24,7 +24,7 @@ import 'rxjs/add/operator/toPromise';
   providers: [MoveProductService]
 })
 export class MoveProductComponent implements OnInit {
-
+ 
   myForm: FormGroup;
 
   private allTransactions;

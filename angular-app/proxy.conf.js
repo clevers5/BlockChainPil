@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+ 
 function getTarget() {
     if (process.env.REST_SERVER_URLS) {
         const restServerURLs = JSON.parse(process.env.REST_SERVER_URLS);

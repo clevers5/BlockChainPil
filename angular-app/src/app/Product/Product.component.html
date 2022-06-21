@@ -13,197 +13,188 @@
 -->
 
 <div class="search">
-  <h4 class="heading" style ="font-family: 'Source Sans Pro Light', sans-serif; ">Busque aquí para mostrar un producto en particular: <input type="text" name="search-box-product" placeholder="Search" id="txtempsearch" [(ngModel)] = "AssetFind" /></h4>
-    
+	<h4 class="heading" style="font-family: 'Source Sans Pro Light', sans-serif">
+		Busque aquí para mostrar un producto en particular:
+		<input
+			type="text"
+			name="search-box-product"
+			placeholder="Search"
+			id="txtempsearch"
+			[(ngModel)]="AssetFind"
+		/>
+	</h4>
 </div>
 
-<div class="modal fade" id="addAssetModal" tabindex="-1" role="dialog" aria-labelledby="addAssetModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addAssetModalLabel">Crear activo</h4>
-          <p class="modal-intro">Ingrese los valores requeridos a continuación.</p>
-      </div>
-      <form [formGroup]="myForm">
-        <div class="modal-body">
+<div
+	class="modal fade"
+	id="addAssetModal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="addAssetModalLabel"
+>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button
+					type="button"
+					class="close"
+					data-dismiss="modal"
+					aria-label="Close"
+				>
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="addAssetModalLabel">Crear activo</h4>
+				<p class="modal-intro">
+					Ingrese los valores requeridos a continuación.
+				</p>
+			</div>
+			<form [formGroup]="myForm">
+				<div class="modal-body">
+					<div class="form-group text-left">
+						<label for="productId">Id del producto</label>
 
+						<input
+							formControlName="productId"
+							type="text"
+							class="form-control"
+						/>
+					</div>
 
-          
+					<div class="form-group text-left">
+						<label for="producttype">Tipo de producto</label>
 
-            
-              <div class="form-group text-left">
-                <label for="productId">Id del producto</label>
-                
-                  <input formControlName="productId" type="text" class="form-control">
-                
-              </div>
-            
-          
+						<input
+							formControlName="producttype"
+							type="text"
+							class="form-control"
+						/>
+					</div>
 
-            
-              <div class="form-group text-left">
-                <label for="producttype">Tipo de producto</label>
-                
-                  <input formControlName="producttype" type="text" class="form-control">
-                
-              </div>
-            
-          
+					<label for="size">Tamaño</label>
+					<div class="checkbox">
+						<label>
+							<input
+								formControlName="size"
+								name="size"
+								value="SMALL"
+								type="radio"
+							/>
+							Pequeño
+						</label>
 
-            
-              <label for="size">Tamaño</label>
-              <div class="checkbox">
-                
-                  <label>
-                    <input
-                      
-                        formControlName="size"
-                      
-                      name="size"
-                      value="SMALL"
-                      type="radio"
-                      
-                    />
-                    Pequeño
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="size"
-                      
-                      name="size"
-                      value="MEDIUM"
-                      type="radio"
-                      
-                    />
-                    Mediano
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="size"
-                      
-                      name="size"
-                      value="LARGE"
-                      type="radio"
-                      
-                    />
-                    Grande
-                  </label>
-                
-              </div>
-            
-          
+						<label>
+							<input
+								formControlName="size"
+								name="size"
+								value="MEDIUM"
+								type="radio"
+							/>
+							Mediano
+						</label>
 
-            
-              <label for="description">Descripcion</label>
-              <div class="checkbox">
-                
-                  <label>
-                    <input
-                      
-                        formControlName="description"
-                      
-                      name="description"
-                      value="Shoes"
-                      type="radio"
-                      
-                    />
-                    Leche Pil
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="description"
-                      
-                      name="description"
-                      value="Socks"
-                      type="radio"
-                      
-                    />
-                    Yogurth
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="description"
-                      
-                      name="description"
-                      value="Belts"
-                      type="radio"
-                      
-                    />
-                    PilFrutt
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="description"
-                      
-                      name="description"
-                      value="SportsShoes"
-                      type="radio"
-                      
-                    />
-                    Leche Deslactosada
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="description"
-                      
-                      name="description"
-                      value="Flipflops"
-                      type="radio"
-                      
-                    />
-                    Leche Ligth
-                  </label>
-                
-              </div>
-            
-          
+						<label>
+							<input
+								formControlName="size"
+								name="size"
+								value="LARGE"
+								type="radio"
+							/>
+							Grande
+						</label>
+					</div>
 
-            
-              <div class="form-group text-left">
-                <label for="owner">Propietarios</label>
-                
-                    <textarea formControlName="owner" class="form-control" rows="3"></textarea>
-                
-              </div>
-            
-          
+					<label for="description">Descripcion</label>
+					<div class="checkbox">
+						<label>
+							<input
+								formControlName="description"
+								name="description"
+								value="Shoes"
+								type="radio"
+							/>
+							Leche Pil
+						</label>
 
-            
-              <div class="form-group text-left">
-                <label for="issuer">Editor</label>
-                
-                    <textarea formControlName="issuer" class="form-control" rows="3"></textarea>
-                
-              </div>
-            
-          
+						<label>
+							<input
+								formControlName="description"
+								name="description"
+								value="Socks"
+								type="radio"
+							/>
+							Yogurth
+						</label>
 
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" value="Refresh Page" onClick="setTimeout(window.location.reload.bind(window.location), 2000);" data-dismiss="modal">Confirmar</button>
+						<label>
+							<input
+								formControlName="description"
+								name="description"
+								value="Belts"
+								type="radio"
+							/>
+							PilFrutt
+						</label>
 
-        </div>
-      </form>
-    </div>
-  </div>
+						<label>
+							<input
+								formControlName="description"
+								name="description"
+								value="SportsShoes"
+								type="radio"
+							/>
+							Leche Deslactosada
+						</label>
+
+						<label>
+							<input
+								formControlName="description"
+								name="description"
+								value="Flipflops"
+								type="radio"
+							/>
+							Leche Ligth
+						</label>
+					</div>
+
+					<div class="form-group text-left">
+						<label for="owner">Propietarios</label>
+
+						<textarea
+							formControlName="owner"
+							class="form-control"
+							rows="3"
+						></textarea>
+					</div>
+
+					<div class="form-group text-left">
+						<label for="issuer">Editor</label>
+
+						<textarea
+							formControlName="issuer"
+							class="form-control"
+							rows="3"
+						></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						Cancelar
+					</button>
+					<button
+						(click)="addAsset(myForm)"
+						type="submit"
+						class="btn btn-success"
+						value="Refresh Page"
+						onClick="setTimeout(window.location.reload.bind(window.location), 2000);"
+						data-dismiss="modal"
+					>
+						Confirmar
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
-
-
-
 
 <!-- <div class="modal fade" id="updateAssetModal" tabindex="-1" role="dialog" aria-labelledby="updateAssetModalLabel">
   <div class="modal-dialog" role="document">
@@ -434,75 +425,92 @@
   </div>
 </div> -->
 
-
-
-
-
-
-
-
-
-
-
 <div class="container">
 	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-		<strong>Error:</strong> {{errorMessage}}
+		<strong>Error:</strong> {{ errorMessage }}
 	</div>
-  
-  <div class="row">
-    <div class="col-md-9">
-        <h1 class="asset-title" id='assetName'style ="font-family: 'Source Sans Pro Light', sans-serif; ">Products</h1>
-    </div>
-    <div class="col-md-3">
-      <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAssetModal">
-          <span style="font-size: 14px;font-family: inherit;border-right:1px solid rgba(255,255,255,0.5);padding-right:0.6em;margin-right:0.5em;vertical-align:middle;">
-              <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
-                <path fill-rule="evenodd" d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z"/>
-              </svg>
-          </span>
-        Create Asset
-      </button>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-md-12">
-      <table class="table table-responsive">
-        <thead class="thead">
-          <tr class="thead-cols">
-            
-                <th class="info">Id producto</th>
-            
-                <th class="info">Tipo de producto</th>
-            
-                <th class="info">Tamaño</th>
-            
-                <th class="info">descripción</th>
-            
-                <th class="info">Dueño</th>
-            
-                <th class="info">Editor</th>
-            
-              <!-- <th class="info-actions">Actions</th> -->
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let asset of allAssets | FilterAsset : AssetFind">
 
-            
-                <td class="asset-properties">{{asset.productId}}</td>
-            
-                <td class="asset-properties">{{asset.producttype}}</td>
-            
-                <td class="asset-properties">{{asset.size}}</td>
-            
-                <td class="asset-properties">{{asset.description}}</td>
-            
-                <td class="asset-properties">{{asset.owner | slice:53:250}}</td>
-            
-                <td class="asset-properties">{{asset.issuer | slice:53:250}}</td>
-            
-            <!-- <td>
+	<div class="row">
+		<div class="col-md-9">
+			<h1
+				class="asset-title"
+				id="assetName"
+				style="font-family: 'Source Sans Pro Light', sans-serif"
+			>
+				Products
+			</h1>
+		</div>
+		<div class="col-md-3">
+			<button
+				(click)="resetForm()"
+				type="button"
+				class="btn btn-primary"
+				data-toggle="modal"
+				data-target="#addAssetModal"
+			>
+				<span
+					style="
+						font-size: 14px;
+						font-family: inherit;
+						border-right: 1px solid rgba(255, 255, 255, 0.5);
+						padding-right: 0.6em;
+						margin-right: 0.5em;
+						vertical-align: middle;
+					"
+				>
+					<svg
+						class="plus-svg"
+						xmlns="http://www.w3.org/2000/svg"
+						width="10"
+						height="10"
+						viewBox="0 0 10 10"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z"
+						/>
+					</svg>
+				</span>
+				Create Asset
+			</button>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-responsive">
+				<thead class="thead">
+					<tr class="thead-cols">
+						<th class="info">Id producto</th>
+
+						<th class="info">Tipo de producto</th>
+
+						<th class="info">Tamaño</th>
+
+						<th class="info">descripción</th>
+
+						<th class="info">Dueño</th>
+
+						<th class="info">Editor</th>
+
+						<!-- <th class="info-actions">Actions</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let asset of allAssets | FilterAsset: AssetFind">
+						<td class="asset-properties">{{ asset.productId }}</td>
+
+						<td class="asset-properties">{{ asset.producttype }}</td>
+
+						<td class="asset-properties">{{ asset.size }}</td>
+
+						<td class="asset-properties">{{ asset.description }}</td>
+
+						<td class="asset-properties">{{ asset.owner | slice: 53:250 }}</td>
+
+						<td class="asset-properties">{{ asset.issuer | slice: 53:250 }}</td>
+
+						<!-- <td>
               <button (click)="getForm(asset.productId);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateAssetModal">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   width="12.8px" height="12.8px" viewBox="0 0 30.7 30.7" style="enable-background:new 0 0 30.7 30.7;" xml:space="preserve">
@@ -527,10 +535,9 @@
                </svg>
               </button>
             </td> -->
-          </tr>
-        </tbody>
-      </table>
- 
-    </div>
-  </div>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>

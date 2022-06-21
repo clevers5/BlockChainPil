@@ -13,5 +13,5 @@
 #
 
 ---
-  command: node app.js
-  memory: 128M
+command: node app.js
+memory: 128M

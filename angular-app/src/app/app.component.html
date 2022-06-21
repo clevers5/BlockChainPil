@@ -12,66 +12,62 @@
  limitations under the License.
 -->
 
-
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      
-      <!-- <img src="asset/images/logo.png" alt="block-track"> -->
-      <!-- <img src="{{dataholder.path}}" style="width: 50%"> -->
-      <!-- <p class="network-name">This is a tagline</p> -->
-      <h2 class="navbar-brand" style="color: #eae4ec; font-family: 'Source Sans Pro Bold', sans-serif;">Cadena De Suministros</h2> 
-    </div>
-    <img src="https://pilandina.com.bo/wp-content/uploads/2019/04/logo_pil.png" style="margin-bottom:20px" alt="">
-    <ul class="nav navbar-nav">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<!-- <img src="asset/images/logo.png" alt="block-track"> -->
+			<!-- <img src="{{dataholder.path}}" style="width: 50%"> -->
+			<!-- <p class="network-name">This is a tagline</p> -->
+			<h2
+				class="navbar-brand"
+				style="color: #eae4ec; font-family: 'Source Sans Pro Bold', sans-serif"
+			>
+				Cadena De Suministros
+			</h2>
+		</div>
+		<img
+			src="https://pilandina.com.bo/wp-content/uploads/2019/04/logo_pil.png"
+			style="margin-bottom: 20px"
+			alt=""
+		/>
+		<ul class="nav navbar-nav">
+			<li class="dropdown active">
+				<a class="dropdown-toggle" data-toggle="dropdown">Informacion</a>
+				<ul class="dropdown-menu scrollable-menu">
+					<li><a [routerLink]="['/About']">Acerca De</a></li>
+					<li><a [routerLink]="['/AllTransactions']">Blockchain</a></li>
+				</ul>
+			</li>
 
-      <li class="dropdown active">
-        <a class="dropdown-toggle" data-toggle="dropdown">Informacion</a>
-        <ul class="dropdown-menu scrollable-menu">
-              <li><a [routerLink]="['/About']">Acerca De</a></li>
-              <li><a [routerLink]="['/AllTransactions']">Blockchain</a></li>              
-        </ul>
-      </li>
+			<li class="dropdown active">
+				<a class="dropdown-toggle" data-toggle="dropdown">Activos</a>
+				<ul class="dropdown-menu scrollable-menu">
+					<li><a [routerLink]="['/Product']">Productos</a></li>
+				</ul>
+			</li>
+			<li class="dropdown active">
+				<a class="dropdown-toggle" data-toggle="dropdown">Participantes</a>
+				<ul class="dropdown-menu scrollable-menu">
+					<li><a [routerLink]="['/Customer']">Cliente</a></li>
 
-      <li class="dropdown active">
-          <a class="dropdown-toggle" data-toggle="dropdown">Activos</a>
-          <ul class="dropdown-menu scrollable-menu">
-            
-            <li><a [routerLink]="['/Product']">Productos</a></li>
-            
-          </ul>
-      </li>
-      <li class="dropdown active">
-        <a class="dropdown-toggle" data-toggle="dropdown">Participantes</a>
-        <ul class="dropdown-menu scrollable-menu">
-          
-          <li><a [routerLink]="['/Customer']">Cliente</a></li>
-          
-          <li><a [routerLink]="['/Manufacturer']">Fabricante</a></li>
-          
-          <li><a [routerLink]="['/Distributor']">Distribuidor</a></li>
-          
-          <li><a [routerLink]="['/Retailer']">Comerciante</a></li>
-          
-        </ul>
-    </li>
-    <li class="dropdown active">
-      <a class="dropdown-toggle" data-toggle="dropdown">Transacciones</a>
-      <ul class="dropdown-menu scrollable-menu">
-        
-        <li><a [routerLink]="['/MoveProduct']">Movimiento De Productos</a></li>
-        
-      </ul>
-  </li>
-    </ul>
+					<li><a [routerLink]="['/Manufacturer']">Fabricante</a></li>
 
-  </div>
+					<li><a [routerLink]="['/Distributor']">Distribuidor</a></li>
+
+					<li><a [routerLink]="['/Retailer']">Comerciante</a></li>
+				</ul>
+			</li>
+			<li class="dropdown active">
+				<a class="dropdown-toggle" data-toggle="dropdown">Transacciones</a>
+				<ul class="dropdown-menu scrollable-menu">
+					<li>
+						<a [routerLink]="['/MoveProduct']">Movimiento De Productos</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 </nav>
 
-<body>
-
-
-</body>
+<body></body>
 <router-outlet></router-outlet>
-
-

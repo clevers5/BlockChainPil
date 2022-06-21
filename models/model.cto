@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+  
 /**
  * Defines a data model for a product trading network
  */
@@ -24,7 +24,7 @@ enum ProductDesc {
   o SportsShoes
   o Flipflops
 }
-
+ 
 enum ProductSize {
   o SMALL
   o MEDIUM

@@ -53,3 +53,4 @@ import {Event} from './org.hyperledger.composer.system';
       newOwner: Participant;
    }
 // }
+ 

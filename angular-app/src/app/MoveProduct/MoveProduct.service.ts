@@ -23,7 +23,7 @@ import 'rxjs/Rx';
 export class MoveProductService {
 
   private NAMESPACE = 'MoveProduct';
-
+ 
   constructor(private dataService: DataService<MoveProduct>) {
   };
 

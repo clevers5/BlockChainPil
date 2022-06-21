@@ -11,52 +11,64 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-<div class="modal fade" id="addTransactionModal" tabindex="-1" role="dialog" aria-labelledby="addTransactionModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addTransactionModalLabel">Crear Transaccion</h4>
-          <p class="modal-intro">Ingrese los valores requeridos a continuación.</p>
-      </div>
-      <form [formGroup]="myForm">
-        <div class="modal-body">
+<div
+	class="modal fade"
+	id="addTransactionModal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="addTransactionModalLabel"
+>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button
+					type="button"
+					class="close"
+					data-dismiss="modal"
+					aria-label="Close"
+				>
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="addTransactionModalLabel">
+					Crear Transaccion
+				</h4>
+				<p class="modal-intro">
+					Ingrese los valores requeridos a continuación.
+				</p>
+			</div>
+			<form [formGroup]="myForm">
+				<div class="modal-body">
+					<div class="form-group text-left">
+						<label for="product">Producto</label>
 
+						<textarea
+							formControlName="product"
+							class="form-control"
+							rows="3"
+						></textarea>
+					</div>
 
-          
+					<div class="form-group text-left">
+						<label for="issuer">Editor</label>
 
-            
-              <div class="form-group text-left">
-                <label for="product">Producto</label>
-                
-                    <textarea formControlName="product" class="form-control" rows="3"></textarea>
-                
-              </div>
-            
-          
+						<textarea
+							formControlName="issuer"
+							class="form-control"
+							rows="3"
+						></textarea>
+					</div>
 
-            
-              <div class="form-group text-left">
-                <label for="issuer">Editor</label>
-                
-                    <textarea formControlName="issuer" class="form-control" rows="3"></textarea>
-                
-              </div>
-            
-          
+					<div class="form-group text-left">
+						<label for="newOwner">Nuevo Dueño</label>
 
-            
-              <div class="form-group text-left">
-                <label for="newOwner">Nuevo Dueño</label>
-                
-                    <textarea formControlName="newOwner" class="form-control" rows="3"></textarea>
-                
-              </div>
-            
-          
+						<textarea
+							formControlName="newOwner"
+							class="form-control"
+							rows="3"
+						></textarea>
+					</div>
 
-            
-              <!-- <div class="form-group text-left">
+					<!-- <div class="form-group text-left">
                 <label for="transactionId">transactionId</label>
                 
                   <input formControlName="transactionId" type="text" class="form-control">
@@ -72,182 +84,217 @@
                   <input formControlName="timestamp" type="text" class="form-control">
                 
               </div> -->
-            
-          
-
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-          <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirmar</button>
-
-        </div>
-      </form>
-    </div>
-  </div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						Cancelar
+					</button>
+					<button
+						(click)="addTransaction(myForm)"
+						type="submit"
+						class="btn btn-success"
+						data-dismiss="modal"
+					>
+						Confirmar
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
 
+<div
+	class="modal fade"
+	id="updateTransactionModal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="updateTransactionModalLabel"
+>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button
+					type="button"
+					class="close"
+					data-dismiss="modal"
+					aria-label="Close"
+				>
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="updateTransactionModalLabel">
+					Actualizar Transaccion
+				</h4>
+			</div>
+			<form [formGroup]="myForm">
+				<div class="modal-body">
+					<div class="form-group text-left">
+						<label for="product">Producto</label>
 
+						<textarea
+							[ngModel]="product"
+							formControlName="product"
+							class="form-control"
+							rows="3"
+						></textarea>
+					</div>
 
+					<div class="form-group text-left">
+						<label for="issuer">Editor</label>
 
-<div class="modal fade" id="updateTransactionModal" tabindex="-1" role="dialog" aria-labelledby="updateTransactionModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="updateTransactionModalLabel">Actualizar Transaccion</h4>
-      </div>
-      <form [formGroup]="myForm">
-        <div class="modal-body">
+						<textarea
+							[ngModel]="issuer"
+							formControlName="issuer"
+							class="form-control"
+							rows="3"
+						></textarea>
+					</div>
 
+					<div class="form-group text-left">
+						<label for="newOwner">Nuevo Dueño</label>
 
-          
-            <div class="form-group text-left">
-              <label for="product">Producto</label>
+						<textarea
+							[ngModel]="newOwner"
+							formControlName="newOwner"
+							class="form-control"
+							rows="3"
+						></textarea>
+					</div>
 
-              
-                
-                  <textarea [ngModel]="product" formControlName="product" class="form-control" rows="3"></textarea>
-                
-              
+					<div class="form-group text-left">
+						<label for="transactionId">ID de transacción</label>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="issuer">Editor</label>
+						<input
+							[ngModel]="transactionId"
+							formControlName="transactionId"
+							type="text"
+							class="form-control"
+						/>
+					</div>
 
-              
-                
-                  <textarea [ngModel]="issuer" formControlName="issuer" class="form-control" rows="3"></textarea>
-                
-              
+					<div class="form-group text-left">
+						<label for="timestamp">Tiempo</label>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="newOwner">Nuevo Dueño</label>
-
-              
-                
-                  <textarea [ngModel]="newOwner" formControlName="newOwner" class="form-control" rows="3"></textarea>
-                
-              
-
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="transactionId">ID de transacción</label>
-
-              
-                <input [ngModel]="transactionId"formControlName="transactionId" type="text" class="form-control">
-              
-
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="timestamp">Tiempo</label>
-
-              
-                <input [ngModel]="timestamp"formControlName="timestamp" type="text" class="form-control">
-              
-
-            </div>
-          
-
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button (click)="updateTransaction(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Enviar</button>
-        </div>
-      </form>
-    </div>
-  </div>
+						<input
+							[ngModel]="timestamp"
+							formControlName="timestamp"
+							type="text"
+							class="form-control"
+						/>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						Cerrar
+					</button>
+					<button
+						(click)="updateTransaction(myForm)"
+						type="submit"
+						class="btn btn-success"
+						data-dismiss="modal"
+					>
+						Enviar
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
 
-
-
-<div class="modal fade" id="deleteTransactionModal" tabindex="-1" role="dialog" aria-labelledby="deleteTransactionModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="deleteTransactionModalLabel">Borrar Transaccion</h4>
-      </div>
-      <form [formGroup]="myForm" (ngSubmit)="deleteTransaction()">
-        <div class="modal-body">
-          ¿Está seguro de que desea eliminar esta transacción?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-          <button (click)="deleteTransaction()" type="submit" class="btn btn-danger" data-dismiss="modal">Si</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div
+	class="modal fade"
+	id="deleteTransactionModal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="deleteTransactionModalLabel"
+>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button
+					type="button"
+					class="close"
+					data-dismiss="modal"
+					aria-label="Close"
+				>
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="deleteTransactionModalLabel">
+					Borrar Transaccion
+				</h4>
+			</div>
+			<form [formGroup]="myForm" (ngSubmit)="deleteTransaction()">
+				<div class="modal-body">
+					¿Está seguro de que desea eliminar esta transacción?
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						No
+					</button>
+					<button
+						(click)="deleteTransaction()"
+						type="submit"
+						class="btn btn-danger"
+						data-dismiss="modal"
+					>
+						Si
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 <div class="container col-md-6">
-    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-        <strong>Error:</strong> {{errorMessage}}
-    </div>
-  
-  <div class="row">
-    <div class="col-md-12">
-        <h1 class="transaction-title" id='transactionName'>Mover Producto</h1>
-        <p class="invoke_cancel" id='invoke_cancel'>Invocar</p>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-12">
-          Cuando se invoque, esta transacción tendrá los siguientes atributos:
-          <br>
-          <ul>
-            
+	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+		<strong>Error:</strong> {{ errorMessage }}
+	</div>
 
-              
-                <li><span class="attribute"><b>Producto</b></span></li>
-              
-            
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="transaction-title" id="transactionName">Mover Producto</h1>
+			<p class="invoke_cancel" id="invoke_cancel">Invocar</p>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-12">
+					Cuando se invoque, esta transacción tendrá los siguientes atributos:
+					<br />
+					<ul>
+						<li>
+							<span class="attribute"><b>Producto</b></span>
+						</li>
 
-              
-                <li><span class="attribute"><b>Editor</b></span></li>
-              
-            
+						<li>
+							<span class="attribute"><b>Editor</b></span>
+						</li>
 
-              
-                <li><span class="attribute"><b>Nuevo dueño</b></span></li>
-              
-            
+						<li>
+							<span class="attribute"><b>Nuevo dueño</b></span>
+						</li>
 
-              
-                <li><span class="attribute"><b>ID de transacción</b></span></li>
-              
-            
+						<li>
+							<span class="attribute"><b>ID de transacción</b></span>
+						</li>
 
-              
-                <li><span class="attribute"><b>Tiempo</b></span></li>
-              
-            
-          </ul>
-        </div>
-      </div>
-      <!-- <button type="button" class="btn btn-primary invokeTransactionBtn" data-toggle="modal">Invoke</button> -->
-      <button (click)="resetForm();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">
-      Invocar</button>  
-    </div>
-  </div>
+						<li>
+							<span class="attribute"><b>Tiempo</b></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- <button type="button" class="btn btn-primary invokeTransactionBtn" data-toggle="modal">Invoke</button> -->
+			<button
+				(click)="resetForm()"
+				type="button"
+				class="btn btn-primary"
+				data-toggle="modal"
+				data-target="#addTransactionModal"
+			>
+				Invocar
+			</button>
+		</div>
+	</div>
 </div>
- 

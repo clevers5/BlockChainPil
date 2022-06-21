@@ -50,3 +50,4 @@ rules:
     yoda: error
     no-confusing-arrow: 2
     no-constant-condition: 2
+ 

@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+ 
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
@@ -22,7 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as sinon from 'sinon';
 import { DataService } from '../data.service';
 import { CustomerComponent } from './Customer.component';
-import {CustomerService} from './Customer.service';
+import { CustomerService } from './Customer.service';
 
 describe('CustomerComponent', () => {
   let component: CustomerComponent;
@@ -38,7 +38,7 @@ describe('CustomerComponent', () => {
     mockDataService = sinon.createStubInstance(DataService);
 
     TestBed.configureTestingModule({
-      declarations: [ CustomerComponent ],
+      declarations: [CustomerComponent],
       imports: [
         BrowserModule,
         FormsModule,
@@ -46,8 +46,8 @@ describe('CustomerComponent', () => {
         HttpModule
       ],
       providers: [
-        {provide: CustomerService, useValue: mockCustomerService },
-        {provide: DataService, useValue: mockDataService },
+        { provide: CustomerService, useValue: mockCustomerService },
+        { provide: DataService, useValue: mockDataService },
       ]
     });
 

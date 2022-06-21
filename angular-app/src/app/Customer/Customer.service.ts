@@ -17,7 +17,7 @@ import { DataService } from '../data.service';
 import { Observable } from 'rxjs/Observable';
 import { Customer } from '../org.hyperledger_composer.scms';
 import 'rxjs/Rx';
-
+ 
 // Can be injected into a constructor
 @Injectable()
 export class CustomerService {

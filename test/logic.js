@@ -16,7 +16,7 @@
 /**
  * Write the unit tests for your transction processor functions here
  */
-
+ 
 const AdminConnection = require('composer-admin').AdminConnection;
 const BusinessNetworkConnection = require('composer-client').BusinessNetworkConnection;
 const { BusinessNetworkDefinition, CertificateUtil, IdCard } = require('composer-common');
@@ -34,7 +34,7 @@ const participantNS = namespace + '.' + participantType;
 
 describe('#' + namespace, () => {
     // In-memory card store for testing so cards are not persisted to the file system
-    const cardStore = require('composer-common').NetworkCardStoreManager.getCardStore( { type: 'composer-wallet-inmemory' } );
+    const cardStore = require('composer-common').NetworkCardStoreManager.getCardStore({ type: 'composer-wallet-inmemory' });
 
     // Embedded connection used for local testing
     const connectionProfile = {
@@ -71,7 +71,7 @@ describe('#' + namespace, () => {
         const deployerMetadata = {
             version: 1,
             userName: 'PeerAdmin',
-            roles: [ 'PeerAdmin', 'ChannelAdmin' ]
+            roles: ['PeerAdmin', 'ChannelAdmin']
         };
         const deployerCard = new IdCard(deployerMetadata, connectionProfile);
         deployerCard.setCredentials(credentials);
@@ -234,7 +234,7 @@ describe('#' + namespace, () => {
         asset3.value = '30';
 
         // Try to add the asset, should fail.
-        const assetRegistry = await  businessNetworkConnection.getAssetRegistry(assetNS);
+        const assetRegistry = await businessNetworkConnection.getAssetRegistry(assetNS);
         assetRegistry.add(asset3).should.be.rejectedWith(/does not have .* access to resource/);
     });
 

@@ -1,92 +1,77 @@
-
-
 <div class="container align">
-
-  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-		<strong>Error:</strong> {{errorMessage}}
+	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+		<strong>Error:</strong> {{ errorMessage }}
 	</div>
 
-  <div class="row">
-      <h2> Blockchain </h2>
-  </div>
+	<div class="row">
+		<h2>Blockchain</h2>
+	</div>
 
-  <div class="row">
-    <br>
-  </div>
+	<div class="row">
+		<br />
+	</div>
 
-  <div *ngIf="performedTransactions.length == 0 && systemTransactions.length == 0" class="row">
-      <h4>No Hay Transacciones</h4>
-    </div>
+	<div
+		*ngIf="performedTransactions.length == 0 && systemTransactions.length == 0"
+		class="row"
+	>
+		<h4>No Hay Transacciones</h4>
+	</div>
 
-  <div *ngIf="performedTransactions.length > 0" class="row" >
-    <h4>Transacciones Realizadas</h4>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>
-            Tipo de transaccion
-          </th>
-          <th>
-            ID Transaccion
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let transaction of performedTransactions">
-          <td>
-            {{transaction.transactionType}}
-          </td>
-          <td>
-            {{transaction.transactionId}}
-          </td>
+	<div *ngIf="performedTransactions.length > 0" class="row">
+		<h4>Transacciones Realizadas</h4>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Tipo de transaccion</th>
+					<th>ID Transaccion</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let transaction of performedTransactions">
+					<td>
+						{{ transaction.transactionType }}
+					</td>
+					<td>
+						{{ transaction.transactionId }}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
+	<div class="row">
+		<br />
+		<br />
+	</div>
 
-        </tr>
-      </tbody>
-    </table>
+	<div *ngIf="systemTransactions.length > 0" class="row">
+		<h4>Transacciones del sistema</h4>
 
-  </div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Tipo de transaccion</th>
+					<th>ID Transaccion</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let transaction of systemTransactions">
+					<td>
+						{{ transaction.transactionType }}
+					</td>
+					<td>
+						{{ transaction.transactionId }}
+					</td>
+				</tr>
+			</tbody>
+		</table>
 
-  <div class="row">
-    <br>
-    <br>
-  </div>
+		<!-- <p *ngFor="let transaction of allTransactions">{{transaction.transactionId}}</p> -->
+	</div>
 
-  <div *ngIf="systemTransactions.length > 0" class="row">
-    <h4>Transacciones del sistema</h4>
-
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>
-            Tipo de transaccion
-          </th>
-          <th>
-            ID Transaccion
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let transaction of systemTransactions">
-          <td>
-            {{transaction.transactionType}}
-          </td>
-          <td>
-            {{transaction.transactionId}}
-          </td>
-
-
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- <p *ngFor="let transaction of allTransactions">{{transaction.transactionId}}</p> -->
-  </div>
-
-  <div class="row">
-    <br>
-    <br>
-  </div>
-
-
+	<div class="row">
+		<br />
+		<br />
+	</div>
 </div>

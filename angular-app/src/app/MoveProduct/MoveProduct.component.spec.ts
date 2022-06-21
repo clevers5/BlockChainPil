@@ -23,7 +23,7 @@ import * as sinon from 'sinon';
 import { DataService } from '../data.service';
 import { MoveProductComponent } from './MoveProduct.component';
 import {MoveProductService} from './MoveProduct.service';
-
+ 
 describe('MoveProductComponent', () => {
   let component: MoveProductComponent;
   let fixture: ComponentFixture<MoveProductComponent>;

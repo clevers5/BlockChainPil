@@ -14,10 +14,10 @@
 
 import { AngularTestPage } from './app.po';
 import { ExpectedConditions, browser, element, by } from 'protractor';
-import {} from 'jasmine';
+import { } from 'jasmine';
 
 
-describe('Starting tests for angular-app', function() {
+describe('Starting tests for angular-app', function () {
   let page: AngularTestPage;
 
   beforeEach(() => {
@@ -26,136 +26,136 @@ describe('Starting tests for angular-app', function() {
 
   it('website title should be angular-app', () => {
     page.navigateTo('/');
-    return browser.getTitle().then((result)=>{
+    return browser.getTitle().then((result) => {
       expect(result).toBe('angular-app');
     })
   });
 
-  it('network-name should be block-track@0.0.1',() => {
+  it('network-name should be block-track@0.0.1', () => {
     element(by.css('.network-name')).getWebElement()
-    .then((webElement) => {
-      return webElement.getText();
-    })
-    .then((txt) => {
-      expect(txt).toBe('block-track@0.0.1.bna');
-    });
+      .then((webElement) => {
+        return webElement.getText();
+      })
+      .then((txt) => {
+        expect(txt).toBe('block-track@0.0.1.bna');
+      });
   });
 
-  it('navbar-brand should be angular-app',() => {
+  it('navbar-brand should be angular-app', () => {
     element(by.css('.navbar-brand')).getWebElement()
-    .then((webElement) => {
-      return webElement.getText();
-    })
-    .then((txt) => {
-      expect(txt).toBe('angular-app');
-    });
+      .then((webElement) => {
+        return webElement.getText();
+      })
+      .then((txt) => {
+        expect(txt).toBe('angular-app');
+      });
   });
 
-  
-    it('Product component should be loadable',() => {
-      page.navigateTo('/Product');
-      browser.findElement(by.id('assetName'))
+
+  it('Product component should be loadable', () => {
+    page.navigateTo('/Product');
+    browser.findElement(by.id('assetName'))
       .then((assetName) => {
         return assetName.getText();
       })
       .then((txt) => {
         expect(txt).toBe('Product');
       });
-    });
+  });
 
-    it('Product table should have 7 columns',() => {
-      page.navigateTo('/Product');
-      element.all(by.css('.thead-cols th')).then(function(arr) {
-        expect(arr.length).toEqual(7); // Addition of 1 for 'Action' column
-      });
+  it('Product table should have 7 columns', () => {
+    page.navigateTo('/Product');
+    element.all(by.css('.thead-cols th')).then(function (arr) {
+      expect(arr.length).toEqual(7); // Addition of 1 for 'Action' column
     });
-  
+  });
 
-  
-    it('Customer component should be loadable',() => {
-      page.navigateTo('/Customer');
-      browser.findElement(by.id('participantName'))
+
+
+  it('Customer component should be loadable', () => {
+    page.navigateTo('/Customer');
+    browser.findElement(by.id('participantName'))
       .then((participantName) => {
         return participantName.getText();
       })
       .then((txt) => {
         expect(txt).toBe('Customer');
       });
-    });
+  });
 
-    it('Customer table should have 5 columns',() => {
-      page.navigateTo('/Customer');
-      element.all(by.css('.thead-cols th')).then(function(arr) {
-        expect(arr.length).toEqual(5); // Addition of 1 for 'Action' column
-      });
+  it('Customer table should have 5 columns', () => {
+    page.navigateTo('/Customer');
+    element.all(by.css('.thead-cols th')).then(function (arr) {
+      expect(arr.length).toEqual(5); // Addition of 1 for 'Action' column
     });
-  
-    it('Manufacturer component should be loadable',() => {
-      page.navigateTo('/Manufacturer');
-      browser.findElement(by.id('participantName'))
+  });
+
+  it('Manufacturer component should be loadable', () => {
+    page.navigateTo('/Manufacturer');
+    browser.findElement(by.id('participantName'))
       .then((participantName) => {
         return participantName.getText();
       })
       .then((txt) => {
         expect(txt).toBe('Manufacturer');
       });
-    });
+  });
 
-    it('Manufacturer table should have 5 columns',() => {
-      page.navigateTo('/Manufacturer');
-      element.all(by.css('.thead-cols th')).then(function(arr) {
-        expect(arr.length).toEqual(5); // Addition of 1 for 'Action' column
-      });
+  it('Manufacturer table should have 5 columns', () => {
+    page.navigateTo('/Manufacturer');
+    element.all(by.css('.thead-cols th')).then(function (arr) {
+      expect(arr.length).toEqual(5); // Addition of 1 for 'Action' column
     });
-  
-    it('Distributor component should be loadable',() => {
-      page.navigateTo('/Distributor');
-      browser.findElement(by.id('participantName'))
+  });
+
+  it('Distributor component should be loadable', () => {
+    page.navigateTo('/Distributor');
+    browser.findElement(by.id('participantName'))
       .then((participantName) => {
         return participantName.getText();
       })
       .then((txt) => {
         expect(txt).toBe('Distributor');
       });
-    });
+  });
 
-    it('Distributor table should have 5 columns',() => {
-      page.navigateTo('/Distributor');
-      element.all(by.css('.thead-cols th')).then(function(arr) {
-        expect(arr.length).toEqual(5); // Addition of 1 for 'Action' column
-      });
+  it('Distributor table should have 5 columns', () => {
+    page.navigateTo('/Distributor');
+    element.all(by.css('.thead-cols th')).then(function (arr) {
+      expect(arr.length).toEqual(5); // Addition of 1 for 'Action' column
     });
-  
-    it('Retailer component should be loadable',() => {
-      page.navigateTo('/Retailer');
-      browser.findElement(by.id('participantName'))
+  });
+
+  it('Retailer component should be loadable', () => {
+    page.navigateTo('/Retailer');
+    browser.findElement(by.id('participantName'))
       .then((participantName) => {
         return participantName.getText();
       })
       .then((txt) => {
         expect(txt).toBe('Retailer');
       });
-    });
+  });
 
-    it('Retailer table should have 5 columns',() => {
-      page.navigateTo('/Retailer');
-      element.all(by.css('.thead-cols th')).then(function(arr) {
-        expect(arr.length).toEqual(5); // Addition of 1 for 'Action' column
-      });
+  it('Retailer table should have 5 columns', () => {
+    page.navigateTo('/Retailer');
+    element.all(by.css('.thead-cols th')).then(function (arr) {
+      expect(arr.length).toEqual(5); // Addition of 1 for 'Action' column
     });
-  
+  });
 
-  
-    it('MoveProduct component should be loadable',() => {
-      page.navigateTo('/MoveProduct');
-      browser.findElement(by.id('transactionName'))
+
+
+  it('MoveProduct component should be loadable', () => {
+    page.navigateTo('/MoveProduct');
+    browser.findElement(by.id('transactionName'))
       .then((transactionName) => {
         return transactionName.getText();
       })
       .then((txt) => {
         expect(txt).toBe('MoveProduct');
       });
-    });
-  
+  });
+
 
 });

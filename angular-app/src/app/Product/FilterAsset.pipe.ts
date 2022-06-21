@@ -23,4 +23,4 @@ export class FilterAssetPipe implements PipeTransform
         }
 
     }
-}
+} 

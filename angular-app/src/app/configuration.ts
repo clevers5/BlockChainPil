@@ -10,3 +10,4 @@ export class Configuration {
     public ApiUrl: string = "/api/";
     public ServerWithApiUrl = this.Server + this.ApiUrl;
 }
+ 
