@@ -23,6 +23,7 @@
     border-radius: 0px;
     background: #343E51;
     border: none;
+    margin-bottom: 0;
 }
 
 .navbar-header {
@@ -148,4 +149,15 @@
 img .imglogo{
     width: 400px;
     height: auto;
+}
+
+.navdisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navdisplay img{
+    width: 60%;
+    min-width: 280px;
 }

@@ -20,16 +20,23 @@
 			<!-- <p class="network-name">This is a tagline</p> -->
 			<h2
 				class="navbar-brand"
-				style="color: #eae4ec; font-family: 'Source Sans Pro Bold', sans-serif"
+				style="
+					color: #eae4ec;
+					font-family: 'Source Sans Pro Bold', sans-serif;
+					display: flex;
+					text-align: center;
+					justify-items: center;
+				"
 			>
-				Cadena De Suministros
+				Cadena de suministros con tecnología Blockchain
 			</h2>
 		</div>
-		<img
-			src="https://pilandina.com.bo/wp-content/uploads/2019/04/logo_pil.png"
-			style="margin-bottom: 20px"
-			alt=""
-		/>
+		<div style="display: flex; justify-content: center; align-items: center">
+			<img src="assets/LogoPil.png" style="width: 150px" alt="" />
+		</div>
+		<div class="navdisplay">
+			<img src="assets/FlujoCadenaDeSuministros1.png" alt="" />
+		</div>
 		<ul class="nav navbar-nav">
 			<li class="dropdown active">
 				<a class="dropdown-toggle" data-toggle="dropdown">Informacion</a>
@@ -40,9 +47,9 @@
 			</li>
 
 			<li class="dropdown active">
-				<a class="dropdown-toggle" data-toggle="dropdown">Activos</a>
+				<a class="dropdown-toggle" data-toggle="dropdown">Productos</a>
 				<ul class="dropdown-menu scrollable-menu">
-					<li><a [routerLink]="['/Product']">Productos</a></li>
+					<li><a [routerLink]="['/Product']">Crear productos</a></li>
 				</ul>
 			</li>
 			<li class="dropdown active">
