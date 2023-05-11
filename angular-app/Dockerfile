@@ -12,7 +12,7 @@
 # limitations under the License.
 #
  
-FROM node:8-alpine AS builder
+FROM node:20.0-alpine AS builder
 ENV NPM_CONFIG_LOGLEVEL warn
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
@@ -24,7 +24,7 @@ RUN apk add --no-cache make gcc g++ python git && \
 COPY . /usr/src/app/
 RUN npm run build
 
-FROM node:8-alpine
+FROM node:20.0-alpine
 ENV NPM_CONFIG_LOGLEVEL warn
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
